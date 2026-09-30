@@ -39,10 +39,12 @@
     padding-inline: 20px;
   }
   main { max-width: 620px; width: 100%; text-align: center; }
-  .mark {
-    width: 72px; height: 72px; margin: 0 auto 28px; border-radius: 50%;
-    border: 2px solid var(--amber); display: grid; place-items: center;
-    font-family: var(--font-display); font-weight: 600; font-size: 34px; color: var(--amber-2);
+  .logo {
+    width: min(200px, 52vw); aspect-ratio: 844 / 822; margin: 0 auto 26px;
+    background: var(--amber-2);
+    -webkit-mask: url("logo.svg") center / contain no-repeat;
+    mask: url("logo.svg") center / contain no-repeat;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
   }
   h1 {
     font-family: var(--font-display); font-weight: 300; font-optical-sizing: auto;
@@ -59,7 +61,7 @@
 </head>
 <body>
 <main>
-  <div class="mark" aria-hidden="true">S</div>
+  <div class="logo" role="img" aria-label="Logo des Schwenkbiervereins: Bierflasche, Flaschenöffner am Faden, spritzender Kronkorken"></div>
   <div class="eyebrow">schwenkbierverein.de</div>
   <h1>Schwenkbierverein</h1>
   <p>Diese Seite entsteht gerade. In Kürze findet ihr hier alles rund um den Verein, Termine und Kontakt.</p>
