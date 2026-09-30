@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" width="720" height="720" opacity="0.55">
+  <!-- Schwenkbier-Motive als Kachel: Ast mit Öffner am Faden, geschwenkte Flasche, Schaum, Kronkorken, Stoppuhr, Schwenkbogen -->
+  <defs>
+    <style>
+      .l { fill: none; stroke: #f2c26b; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .f { fill: #f2c26b; }
+      .t { fill: none; stroke: #f2c26b; stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 3 7; }
+      .d { fill: #f2c26b; }
+    </style>
+    <!-- Bierflasche (Achse senkrecht, Hals oben, ca. 140 hoch) -->
+    <g id="flasche">
+      <path class="l" d="M-11,0 v-12 a3,3 0 0 1 3,-3 h16 a3,3 0 0 1 3,3 v12 c0,10 8,16 8,30 v80 a8,8 0 0 1 -8,8 h-22 a8,8 0 0 1 -8,-8 v-80 c0,-14 8,-20 8,-30 z"/>
+      <rect class="f" x="-13" y="-17" width="26" height="6" rx="2"/>
+      <rect class="l" x="-13" y="40" width="26" height="46" rx="4"/>
+      <path class="l" d="M-6,52 h12 M-6,60 h12 M-8,70 h16"/>
+    </g>
+    <!-- Kronkorken -->
+    <g id="korken">
+      <path class="l" d="M0,-13 l4,-2 3,4 5,-1 1,5 5,2 -1,5 3,4 -3,4 1,5 -5,2 -1,5 -5,-1 -3,4 -4,-2 -4,2 -3,-4 -5,1 -1,-5 -5,-2 1,-5 -3,-4 3,-4 -1,-5 5,-2 1,-5 5,1 3,-4 z"/>
+      <circle class="l" cx="0" cy="0" r="7"/>
+    </g>
+    <!-- Flaschenöffner mit Loch -->
+    <g id="oeffner">
+      <path class="l" d="M0,0 a6,6 0 1 0 0.1,0 z"/>
+      <path class="l" d="M-5,6 c-4,14 -4,26 -6,40 h22 c-2,-14 -2,-26 -6,-40"/>
+      <path class="l" d="M-11,46 a11,10 0 1 0 22,0 a11,10 0 1 0 -22,0 z"/>
+      <path class="f" d="M-5,48 h10 v4 h-10 z"/>
+    </g>
+    <!-- Schaumwolke -->
+    <g id="schaum">
+      <path class="l" d="M0,0 c-6,-8 4,-16 10,-10 c4,-10 18,-8 18,2 c10,-2 14,10 6,14 c2,8 -10,12 -14,6 c-6,8 -20,4 -18,-4 c-8,0 -10,-8 -2,-8 z"/>
+      <circle class="d" cx="-6" cy="-14" r="2"/>
+      <circle class="d" cx="30" cy="-12" r="1.6"/>
+      <circle class="d" cx="12" cy="-24" r="2.4"/>
+    </g>
+    <!-- Stoppuhr -->
+    <g id="uhr">
+      <circle class="l" cx="0" cy="0" r="22"/>
+      <path class="l" d="M0,-22 v-6 M-6,-28 h12 M14,-18 l5,-5"/>
+      <path class="l" d="M0,0 v-14 M0,0 l9,6"/>
+      <circle class="d" cx="0" cy="0" r="2"/>
+    </g>
+  </defs>
+
+  <!-- Motiv 1: Ast, Faden, Öffner, eingehängte, seitlich ausgeschwenkte Flasche mit Schwenkbogen -->
+  <g transform="translate(120,40)">
+    <path class="l" d="M-60,0 c30,-6 60,-4 90,2 c20,4 40,2 60,-2" stroke-width="4"/>
+    <path class="l" d="M30,2 c-4,-10 -8,-14 -18,-18 M60,0 c6,-8 10,-12 20,-14"/>
+    <path class="l" d="M30,2 v70" stroke-width="1.4"/>
+    <use href="#oeffner" transform="translate(30,72)"/>
+    <path class="t" d="M-40,150 a90,90 0 0 1 140,0"/>
+    <path class="l" d="M100,150 l-6,-10 M100,150 l-11,3"/>
+    <g transform="translate(30,120) rotate(-28)">
+      <use href="#flasche"/>
+    </g>
+  </g>
+
+  <!-- Motiv 2: Flasche mit Schaumfontäne -->
+  <g transform="translate(560,110) rotate(12)">
+    <use href="#flasche"/>
+    <use href="#schaum" transform="translate(-14,-40)"/>
+    <path class="l" d="M0,-20 c-2,-12 -4,-20 -8,-30 M4,-20 c2,-12 6,-20 12,-28"/>
+    <circle class="d" cx="-16" cy="-62" r="2"/>
+    <circle class="d" cx="22" cy="-58" r="2.6"/>
+    <circle class="d" cx="4" cy="-70" r="1.6"/>
+  </g>
+
+  <!-- Motiv 3: Stoppuhr -->
+  <use href="#uhr" transform="translate(380,250) rotate(8)"/>
+
+  <!-- Motiv 4: Kronkorken verstreut -->
+  <use href="#korken" transform="translate(240,300) rotate(15)"/>
+  <use href="#korken" transform="translate(300,340) rotate(-30) scale(0.8)"/>
+  <use href="#korken" transform="translate(640,330) rotate(40)"/>
+  <use href="#korken" transform="translate(90,460) rotate(-12) scale(0.9)"/>
+  <use href="#korken" transform="translate(500,650) rotate(22)"/>
+
+  <!-- Motiv 5: die Zahl drei Schwenks als Bogen mit drei Punkten -->
+  <g transform="translate(560,470)">
+    <path class="t" d="M-80,0 a80,60 0 0 1 160,0"/>
+    <circle class="d" cx="-80" cy="0" r="3"/>
+    <circle class="d" cx="0" cy="-60" r="3"/>
+    <circle class="d" cx="80" cy="0" r="3"/>
+  </g>
+
+  <!-- Motiv 6: zweiter Öffner am Faden, leer pendelnd, mit Ast -->
+  <g transform="translate(200,540)">
+    <path class="l" d="M-50,0 c20,-4 40,-6 70,0 c14,3 30,4 50,0" stroke-width="4"/>
+    <path class="l" d="M10,1 l8,50" stroke-width="1.4"/>
+    <path class="t" d="M-30,80 a45,45 0 0 1 80,0"/>
+    <use href="#oeffner" transform="translate(18,52) rotate(10)"/>
+  </g>
+
+  <!-- Motiv 7: liegende Flasche mit Schaumrest -->
+  <g transform="translate(420,600) rotate(80)">
+    <use href="#flasche" transform="scale(0.85)"/>
+    <use href="#schaum" transform="translate(-30,-30) scale(0.7) rotate(-80)"/>
+  </g>
+
+  <!-- Motiv 8: Hopfendolde als Randmotiv -->
+  <g transform="translate(60,660)">
+    <path class="l" d="M0,-30 c-16,4 -22,18 -12,30 c-8,10 0,24 12,20 c12,4 20,-10 12,-20 c10,-12 4,-26 -12,-30 z"/>
+    <path class="l" d="M0,-30 v52 M-8,-12 c4,4 12,4 16,0 M-9,4 c5,4 13,4 18,0"/>
+  </g>
+</svg>
