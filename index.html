@@ -22,7 +22,13 @@
   html, body { height: 100%; }
   body {
     margin: 0;
-    background: radial-gradient(ellipse at 50% 0%, var(--bg-2), var(--bg) 70%);
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(ellipse at 50% 40%, rgba(31,22,17,0.55) 0%, rgba(31,22,17,0.92) 60%, var(--bg) 100%),
+      url("hintergrund.svg");
+    background-size: auto, 720px 720px;
+    background-position: center, center top;
+    background-repeat: no-repeat, repeat;
     color: var(--fg);
     font-family: var(--font-body);
     font-size: 17px;
